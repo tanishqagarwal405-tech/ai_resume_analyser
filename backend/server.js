@@ -13,6 +13,8 @@ const analysisRoutes = require('./routes/analysis');
 
 const app = express();
 
+app.set('trust proxy', 1);
+
 app.use(helmet({ contentSecurityPolicy: false }));
 
 // ✅ CORS fix — localhost:5173 allow kiya
